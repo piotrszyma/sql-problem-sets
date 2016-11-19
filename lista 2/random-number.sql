@@ -1,0 +1,1 @@
+SELECT FLOOR(RAND() * 1000);

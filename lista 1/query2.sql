@@ -1,0 +1,1 @@
+select ProductName, UnitPrice from northwind.products where UnitPrice = '20' or UnitPrice = '40' or UnitPrice = '';

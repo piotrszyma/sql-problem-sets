@@ -1,0 +1,1 @@
+select id from ksiazka order by rand() limit 1
