@@ -1,3 +1,4 @@
+#ZADANIE 15
 #Procedura sprawdzająca, jaka najstarsza i najmłodsza (względem daty dodania) książka znajduje się w oddziale podanym jako pierwszy parametr
 
 drop procedure if exists getOldestNewestBooks;
@@ -18,6 +19,6 @@ DELIMITER ;
 set @oldest = null;
 set @youngest = null;
 
-call getOldestNewestBooks("Biblioteka nr 2", @oldest, @youngest);
+call getOldestNewestBooks("Biblioteka nr 1", @oldest, @youngest);
 
 select @oldest, @youngest;

@@ -1,8 +1,8 @@
-drop trigger if exists after_book_addition;
+drop trigger if exists lista2.after_book_addition;
 
 DELIMITER $$
     
-CREATE TRIGGER after_book_addition 
+CREATE TRIGGER lista2.after_book_addition
     after insert on ksiazka
 		for each row
 			begin		
@@ -13,8 +13,8 @@ DELIMITER ;
 drop trigger if exists before_book_deletion;
 
 DELIMITER $$
-    
-CREATE TRIGGER before_book_deletion 
+
+CREATE TRIGGER lista2.before_book_deletion
     after delete on ksiazkawoddziale
 		for each row
 			begin
@@ -27,7 +27,7 @@ DELIMITER ;
 
 show triggers;
 
-drop trigger if exists after_name_change;
+drop trigger if exists lista2.after_name_change;
 
 DELIMITER $$
 

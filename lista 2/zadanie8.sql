@@ -1,3 +1,4 @@
+#ZADANIE 8
 drop trigger if exists after_book_addition;
 
 DELIMITER $$

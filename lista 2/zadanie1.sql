@@ -45,16 +45,7 @@ foreign key (czytelnik) references Czytelnik(id),
 foreign key (biblioteka) references OddzialBiblioteki(id)
 );
 
-drop table if exists KsiazkaWOddziale;
 
-create table KsiazkaWOddziale(
-ksiazka int(6) unsigned not null,
-biblioteka int(6) unsigned not null,
-data_dodania date not null,
-foreign key (ksiazka) references Ksiazka(id),
-foreign key (biblioteka) references OddzialBiblioteki(id),
-check (data_dodania != "")
-);
 
 # ZADANIE 4
 INSERT INTO `Ksiazka` (`imie`,`nazwisko`,`isbn`,`tytul`) VALUES ("Byron","Woodard","5671777645817","nec enim."),("Salvador","Massey","9933781007126","sit amet"),("Angelica","Conley","8377430168218","eu metus."),("Brielle","Riley","2693133294835","eu odio"),("Otto","Gamble","8013663291998","parturient montes,"),("Drake","Calhoun","4424728485720","fringilla mi"),("Hedwig","Forbes","9498279881299","amet, faucibus"),("Roary","Cooper","9237516077834","ante. Maecenas"),("Stephanie","Johnston","7751737360968","rutrum. Fusce"),("Celeste","Norman","0240927226567","risus a");
@@ -80,7 +71,21 @@ INSERT INTO `oddzialbiblioteki` (`nazwa`, `adres`) VALUES ("Niepubliczna Bibliot
 INSERT INTO `oddzialbiblioteki` (`nazwa`, `adres`) VALUES ("Biblioteka nr 3", "Konopnickiej 2/5, 11-202 Opole");
 INSERT INTO `oddzialbiblioteki` (`nazwa`, `adres`) VALUES ("Niepubliczna Biblioteka nr 2", "Komandorska 125, 21-120 Warszawa");
 
+#ZADANIE 6
+
+drop table if exists KsiazkaWOddziale;
+
+create table KsiazkaWOddziale(
+ksiazka int(6) unsigned not null,
+biblioteka int(6) unsigned not null,
+data_dodania date not null,
+foreign key (ksiazka) references Ksiazka(id),
+foreign key (biblioteka) references OddzialBiblioteki(id),
+check (data_dodania != "")
+);
+
 insert into `KsiazkaWOddziale` (`ksiazka`, `biblioteka`, `data_dodania`) values (1, 1, "");
 
+#ZADANIE 7
 INSERT INTO `oddzialbiblioteki` (`nazwa`, `adres`) VALUES ("Niepubliczna Biblioteka nr 3", "Wojowników 125, 22-222 Zielona Góra");
 
