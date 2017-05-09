@@ -1,1 +1,1 @@
-My solutions for  __Bazy danych i systemy informacyjne__. (Computer Science Winter Semester 2016/2017)
+My solutions for  __Języki i paradygmaty programowania__. (Computer Science Summer Semester 2016/2017)
